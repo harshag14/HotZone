@@ -14,7 +14,7 @@ def getviruslist():
 
 
 class AddCaseDetailsForm(forms.Form):
-    caseid = forms.IntegerField(label="Case ID")
+    caseid = forms.IntegerField(label="Case Number  ")
     name = forms.CharField(label="Name   ", max_length=80)
     dateofbirth = forms.DateField(label="Date of Birth  ", widget=forms.SelectDateWidget(years=list(range(2020,1899,-1))))
     idnumber = forms.CharField(label="Identity Document Number  ", max_length=20)
@@ -24,7 +24,7 @@ class AddCaseDetailsForm(forms.Form):
 
 
 class AddLocationDetailsForm(forms.Form):
-    caseid = forms.IntegerField(label="Case ID  ")
+    caseid = forms.IntegerField(label="Case Number  ")
     place = forms.CharField(label="Location   ", max_length=100)
     datefrom = forms.DateField(label="Date From  ", widget=forms.SelectDateWidget(years=list(range(2020,1899,-1))))
     dateto = forms.DateField(label="Date To  ", widget=forms.SelectDateWidget(years=list(range(2020,1899,-1))))
