@@ -26,7 +26,7 @@ SECRET_KEY = 'mrvpql!jvdvk@uzcpz(6%8oe%(&mp=eitm+9i)br7^z&pru04*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hotzone7.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'phase1_config.urls'
@@ -122,5 +123,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+
+STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 
 STATIC_URL = '/static/'
