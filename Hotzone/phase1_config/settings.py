@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'phase1_config.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': env.dj_db_url('https://data.heroku.com/datastores/5aa8d6e2-9059-4e02-91d7-b39cba37864f')
+    'default': env.dj_db_url('postgres://dplhalasagxcws:28b789e77199604bc4e616333ce86a04e9f4d6b66bd5be4b6f184f5e37927a07@ec2-34-200-106-49.compute-1.amazonaws.com:5432/d5vbr07tc99ic'),
 }
 
 
