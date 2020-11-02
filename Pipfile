@@ -10,6 +10,7 @@ django = "~=3.1.2"
 psycopg2-binary = "*"
 gunicorn = "*"
 whitenoise = "*"
+environs = {extras = ["django"], version = "*"}
 
 [requires]
 python_version = "3.8"
