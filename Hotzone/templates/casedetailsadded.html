@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            font-family: "Open Sans"; 
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Details</title>
+    <h1 style='text-align: center; font-size: 40px;'>HotZone</h1>
+</head>
+<body>
+    <h2>Case Created Successfully: </h2>
+    <p> Name - {{ name }}</p>
+    <p> ID Number - {{ idnumber }}</p>
+    <p> Date of Birth - {{ dateofbirth }}</p>
+    <p> Virus Name - {{ virusname }}</p>
+    <p> Disease - {{ disease }}</p>
+    <p> Case ID - {{ caseid }}</p>
+    <p> Date Confirmed - {{ dateconfirmed }}</p>
+    <p> Case Type - {{ casetype }}</p>
+    <p></p>
+
+    <button onclick="location.href= '/user/addcasedetails'">Add Another Case</button>
+    <button onclick="location.href= '/user/addlocationdetails'">Add Location Details</button>
+    <p></p>
+    <button onclick="location.href= '/user/'">Home Page</button>
+    <button onclick="location.href= '/'">Logout</button>
+
+</body>
+</html>

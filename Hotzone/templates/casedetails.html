@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            font-family: "Open Sans"; 
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Details</title>
+    <h1 style='text-align: center; font-size: 40px;'>HotZone</h1>
+</head>
+<body>
+    <h2>Enter Case Details -</h2>
+    <br><br>
+    <form action = "{% url 'case_details_added' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Add Case Details">
+    </form>
+</body>
+</html>
