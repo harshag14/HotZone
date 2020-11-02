@@ -3,6 +3,7 @@ from .models import Virus
 from django.db import models
 
 
+
 def getviruslist():
     v=Virus.objects.all()
     #print(v)
