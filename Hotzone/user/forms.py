@@ -2,7 +2,7 @@ from django import forms
 from .models import Virus
 from django.db import models
 
-'''
+
 def getviruslist():
     v=Virus.objects.all()
     #print(v)
@@ -11,8 +11,7 @@ def getviruslist():
         temp=(virus.name , virus.name)
         VIRUSES.append(temp)
     return VIRUSES
-    '''
-VIRUS=[]
+    
 
 
 class AddCaseDetailsForm(forms.Form):
@@ -22,7 +21,7 @@ class AddCaseDetailsForm(forms.Form):
     idnumber = forms.CharField(label="Identity Document Number  ", max_length=20)
     casetype = forms.CharField(label="Case Type  ", max_length=8, widget=forms.Select(choices=[("Local","Local"), ("Imported","Imported")]))
     dateconfirmed = forms.DateField(label="Date Confirmed  ", widget=forms.SelectDateWidget(years=list(range(2020,1899,-1))))
-    virusname = forms.CharField(label="Virus Name  ", max_length=30, widget=forms.Select(choices=VIRUS))
+    virusname = forms.CharField(label="Virus Name  ", max_length=30, widget=forms.Select(choices=getviruslist()))
 
 
 class AddLocationDetailsForm(forms.Form):
