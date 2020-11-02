@@ -74,13 +74,14 @@ class LocationDetailsAdded(View):
             print(data)
             url = "https://geodata.gov.hk/gs/api/v1.0.0/locationSearch?q="
             query = data['place'].replace(' ', '%20')
+            #print(query)
             geodata = json.loads(urllib.request.urlopen(url+query).read().decode())
             x=geodata[0]['x']
             y=geodata[0]['y']
             addr=geodata[0]['addressEN']
-            print(x,y,addr)
+            #print(x,y,addr)
 
-            print(geodata)
+            #print(geodata)
     
             locationdata = Location.objects.create(
                 place = data['place'],
