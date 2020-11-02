@@ -4,7 +4,7 @@ from django.db import models
 
 class Patient(models.Model):
     name = models.CharField(max_length=80, default="")
-    idnumber = models.CharField(max_length=12)
+    idnumber = models.CharField(max_length=20)
     dateofbirth = models.DateField()
 
     def __str__(self):
@@ -32,8 +32,8 @@ class Case(models.Model):
 
 
 class Location(models.Model):
-    place = models.CharField(max_length=80)
-    address = models.CharField(max_length=100)
+    place = models.CharField(max_length=100)
+    address = models.CharField(max_length=300)
     xcoord = models.FloatField()
     ycoord = models.FloatField()
 
