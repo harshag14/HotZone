@@ -1,0 +1,8 @@
+import json
+import urllib.request
+url = "https://geodata.gov.hk/gs/api/v1.0.0/locationSearch?q="
+query = data['location'].replace(' ', '%20')
+geodata = json.loads(urllib.request.urlopen(url+query).read().decode())
+
+
+case.objct.get(id=
